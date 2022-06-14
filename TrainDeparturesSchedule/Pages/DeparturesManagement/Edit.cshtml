@@ -1,0 +1,41 @@
+﻿@page
+@model TrainDeparturesSchedule.Pages.DeparturesManagement.EditModel
+@{
+}
+
+<form method="post">
+    <input hidden asp-for="TrainDeparture.Id" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Edit Train Departure</h2>
+            <hr />        
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Train"></label>
+            <input asp-for="TrainDeparture.Train" class="form-control"/>
+            <span asp-validation-for="TrainDeparture.Train" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Number"></label>
+            <input asp-for="TrainDeparture.Number" class="form-control"/>
+            <span asp-validation-for="TrainDeparture.Number" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Time"></label>
+            <input asp-for="TrainDeparture.Time" class="form-control"/>
+            <span asp-validation-for="TrainDeparture.Time" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Destination"></label>
+            <input asp-for="TrainDeparture.Destination" class="form-control"/>
+            <span asp-validation-for="TrainDeparture.Destination" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Remarks"></label>
+            <input asp-for="TrainDeparture.Remarks" class="form-control"/>
+            <span asp-validation-for="TrainDeparture.Remarks" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px;">Update</button>
+        <a asp-page="IndexAdmin" class="btn btn-secondary" style="width:150px;">Back to List</a>
+    </div>
+</form>

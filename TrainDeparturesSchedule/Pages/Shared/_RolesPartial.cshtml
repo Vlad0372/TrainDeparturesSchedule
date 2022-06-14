@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{   
+        @if(@User.Identity?.Name == "admin@gmail.com")
+        {
+             <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-page="/Index">Manage Train Departures</a>
+             </li>
+        }
+        else
+        {
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-page="/Index">Train Departures</a>
+            </li>
+        }
+}
+ 

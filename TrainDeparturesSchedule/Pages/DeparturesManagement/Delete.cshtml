@@ -1,0 +1,36 @@
+﻿@page
+@model TrainDeparturesSchedule.Pages.DeparturesManagement.DeleteModel
+@{
+}
+
+<form method="post">
+    <input hidden asp-for="TrainDeparture.Id" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary pl-3">Delete Train Departure</h2>
+            <hr />        
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Train"></label>
+            <input asp-for="TrainDeparture.Train" disabled class="form-control"/>           
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Number"></label>
+            <input asp-for="TrainDeparture.Number" disabled class="form-control"/>          
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Time"></label>
+            <input asp-for="TrainDeparture.Time" disabled class="form-control"/>           
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Destination"></label>
+            <input asp-for="TrainDeparture.Destination" disabled class="form-control"/>         
+        </div>
+        <div class="mb-3">
+            <label asp-for="TrainDeparture.Remarks"></label>
+            <input asp-for="TrainDeparture.Remarks" disabled class="form-control"/>          
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px;">Delete</button>
+        <a asp-page="IndexAdmin" class="btn btn-secondary" style="width:150px;">Back to List</a>
+    </div>
+</form>

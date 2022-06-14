@@ -1,0 +1,48 @@
+﻿@page
+@model TrainDeparturesSchedule.Pages.DeparturesManagement.IndexModel
+@{
+    
+}
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Train Departures</h2>
+        </div>       
+    </div>
+    
+    <br /><br />
+
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Train
+                </th>
+                <th>
+                    Number
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Destination
+                </th>
+                <th>
+                    Remarks
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model.TrainDepartures)
+            {
+                <tr>
+                    <td>@obj.Train</td>
+                    <td>@obj.Number</td>
+                    <td>@obj.Time</td>
+                    <td>@obj.Destination</td>
+                    <td>@obj.Remarks</td>                 
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
